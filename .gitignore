@@ -1,0 +1,5 @@
+qa-technical-api-test.iml
+*.DS_Store
+target/
+.idea/
+
