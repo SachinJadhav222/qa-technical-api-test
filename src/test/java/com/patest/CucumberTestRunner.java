@@ -20,7 +20,7 @@ import java.io.IOException;
         features = "classpath:featureFiles",
         glue = "classpath:",
         format = {"pretty", "html:target/cucumberReports/Destination"},
-        tags = "@api1"
+        tags = "@api-playlist-get"
 )
 public class CucumberTestRunner {
 
