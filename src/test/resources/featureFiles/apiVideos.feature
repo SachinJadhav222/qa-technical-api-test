@@ -11,16 +11,16 @@ Feature: API video
   Scenario: GET Request
     When I execute "GET" request to the end point "/api/video"
     Then I should see response status code "200"
-    And The response body should contain following details about the API
-      | _id    | 596cbda86ed7c10011a68b24 |
-      | artist | Lady Gaga                |
-      | song   | Poker face               |
+  #  And The response body should contain following details about the API
+   #   | _id    | 596cbda86ed7c10011a68b24 |
+    #  | artist | Lady Gaga                |
+     # | song   | Poker face               |
 
   @api-video-get-id @api
   Scenario: GET Request using ID
     When I execute "GET" request to the end point "/api/video/596cbda86ed7c10011a68b24"
     Then I should see response status code "200"
-    And The response body should contain following details about the API
+   And The response body should contain following details about the API
       | _id    | 596cbda86ed7c10011a68b24 |
       | artist | Lady Gaga                |
       | song   | Poker face               |

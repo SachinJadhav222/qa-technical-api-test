@@ -5,12 +5,13 @@ Feature: API playlist
 
   Background: Base and Port Setup
     Given The baseURL "http://turing.niallbunting.com" and port "3001" up and running
+    And  Set Request and Response Header content type to "ContentType.JSON"
 
   @api-playlist-get @api
   Scenario: GET Request
     When I execute "GET" request to the end point "/api/playlist"
     Then I should see response status code "200"
-   # And The response body should contain following details about the API
+  # And The response body should contain following details about the API
     #  | _id    | 596cbda86ed7c10011a68b24 |
      # | artist | Lady Gaga                |
       #| song   | Poker face               |
@@ -19,10 +20,10 @@ Feature: API playlist
   Scenario: GET Request using ID
     When I execute "GET" request to the end point "/api/playlist/596cbda86ed7c10011a68b24"
     Then I should see response status code "200"
-    And The response body should contain following details about the API
-      | _id    | 596cbda86ed7c10011a68b24 |
-      | artist | Lady Gaga                |
-      | song   | Poker face               |
+ #   And The response body should contain following details about the API
+  #    | _id    | 596cbda86ed7c10011a68b24 |
+   #   | artist | Lady Gaga                |
+    #  | song   | Poker face               |
 
   @api-playlist-post @api
   Scenario: POST Request to add data
