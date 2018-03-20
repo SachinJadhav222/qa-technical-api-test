@@ -43,7 +43,7 @@ public class Steps_Implementation {
     }
 
     public void request_execution_to_the_endpoint(String request_type, String END_POINT) {
-        switch (request_type) {
+        switch (request_type.toUpperCase()) {
             case "GET": {
                 response = request.get(END_POINT);
                 break;
@@ -58,6 +58,11 @@ public class Steps_Implementation {
             }
             case "DELETE": {
                 response = request.delete(END_POINT);
+                break;
+            }
+            case "PATCH": {
+                response = request.patch(END_POINT);
+
                 break;
             }
         }
